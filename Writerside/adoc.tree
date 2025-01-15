@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="adoc"
+                 name="API Docs"
+                 start-page="api-docs.md">
+
+    <toc-element topic="api-docs.md"/>
+    <toc-element topic="API-quickstart.md"/>
+    <toc-element topic="API-reference.md">
+        <toc-element topic="Contact.md"/>
+        <toc-element topic="Pet.md">
+        </toc-element>
+        <toc-element toc-title="最新消息">
+            <toc-element topic="最新消息內頁.md"/>
+            <toc-element topic="根據類型獲取最新消息.md"/>
+        </toc-element>
+        <toc-element toc-title="問卷">
+            <toc-element topic="問卷內頁.md"/>
+            <toc-element topic="根據類型獲取問卷.md"/>
+        </toc-element>
+        <toc-element toc-title="聯絡簿">
+            <toc-element topic="聯絡簿內頁.md"/>
+            <toc-element topic="根據類型獲取聯絡簿列表.md"/>
+        </toc-element>
+        <toc-element toc-title="到班/離班">
+            <toc-element topic="根據分校、班別獲取點名單.md"/>
+            <toc-element topic="根據學校、星期、時段獲取點名單.md"/>
+        </toc-element>
+        <toc-element toc-title="學生管理">
+            <toc-element topic="Returns-pet-inventories-by-status.md"/>
+            <toc-element topic="Find-purchase-order-by-ID.md"/>
+            <toc-element topic="Delete-purchase-order-by-ID.md"/>
+            <toc-element topic="取得特定訂餐紀錄.md"/>
+        </toc-element>
+        <toc-element toc-title="User">
+            <toc-element topic="Create-user.md"/>
+            <toc-element topic="Creates-list-of-users-with-given-input-array.md"/>
+            <toc-element topic="Logs-user-into-the-system.md"/>
+            <toc-element topic="Logs-out-current-logged-in-user-session.md"/>
+            <toc-element topic="Get-user-by-user-name.md"/>
+            <toc-element topic="Update-user.md"/>
+            <toc-element topic="Delete-user.md"/>
+        </toc-element>
+    </toc-element>
+    <toc-element topic="Con.md"/>
+    <toc-element topic="Changes.md"/>
+</instance-profile>

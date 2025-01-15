@@ -1,0 +1,1273 @@
+<html>
+<head>
+<title>openapi.yaml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #bcbec4;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+openapi.yaml</font>
+</center></td></tr></table>
+<pre><span class="s0">openapi</span><span class="s1">: </span><span class="s3">3.0.2</span>
+<span class="s0">servers</span><span class="s1">:</span>
+  <span class="s1">- </span><span class="s0">url</span><span class="s1">: </span><span class="s3">/v3</span>
+<span class="s0">info</span><span class="s1">:</span>
+  <span class="s0">description</span><span class="s1">: </span><span class="s3">|-</span>
+    <span class="s3">This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about</span>
+    <span class="s3">Swagger at [http://swagger.io](http://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!</span>
+    <span class="s3">You can now help us improve the API whether it's by making changes to the definition itself or to the code.</span>
+    <span class="s3">That way, with time, we can improve the API in general, and expose some of the new features in OAS3.</span>
+
+    <span class="s3">Some useful links:</span>
+    <span class="s3">- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)</span>
+    <span class="s3">- [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)</span>
+  <span class="s0">version</span><span class="s1">: </span><span class="s3">1.0.17</span>
+  <span class="s0">title</span><span class="s1">: </span><span class="s3">Swagger Petstore - OpenAPI 3.0</span>
+  <span class="s0">termsOfService</span><span class="s1">: </span><span class="s4">'http://swagger.io/terms/'</span>
+  <span class="s0">contact</span><span class="s1">:</span>
+    <span class="s0">email</span><span class="s1">: </span><span class="s3">apiteam@swagger.io</span>
+  <span class="s0">license</span><span class="s1">:</span>
+    <span class="s0">name</span><span class="s1">: </span><span class="s3">Apache 2.0</span>
+    <span class="s0">url</span><span class="s1">: </span><span class="s4">'http://www.apache.org/licenses/LICENSE-2.0.html'</span>
+<span class="s0">tags</span><span class="s1">:</span>
+  <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">pet</span>
+    <span class="s0">description</span><span class="s1">: </span><span class="s3">Everything about your Pets</span>
+    <span class="s0">externalDocs</span><span class="s1">:</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Find out more</span>
+      <span class="s0">url</span><span class="s1">: </span><span class="s4">'http://swagger.io'</span>
+  <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">breaking_news</span>
+    <span class="s0">description</span><span class="s1">: </span><span class="s3">Everything about your Pets</span>
+    <span class="s0">externalDocs</span><span class="s1">:</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Find out more</span>
+      <span class="s0">url</span><span class="s1">: </span><span class="s4">'http://swagger.io'</span>
+  <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">questionnaire</span>
+    <span class="s0">description</span><span class="s1">: </span><span class="s3">Everything about your Pets</span>
+    <span class="s0">externalDocs</span><span class="s1">:</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Find out more</span>
+      <span class="s0">url</span><span class="s1">: </span><span class="s4">'http://swagger.io'</span>
+  <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">contact_books</span>
+    <span class="s0">description</span><span class="s1">: </span><span class="s3">Everything about your Pets</span>
+    <span class="s0">externalDocs</span><span class="s1">:</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Find out more</span>
+      <span class="s0">url</span><span class="s1">: </span><span class="s4">'http://swagger.io'</span>
+  <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">store</span>
+    <span class="s0">description</span><span class="s1">: </span><span class="s3">Access to Petstore orders</span>
+    <span class="s0">externalDocs</span><span class="s1">:</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Find out more about our store</span>
+      <span class="s0">url</span><span class="s1">: </span><span class="s4">'http://swagger.io'</span>
+  <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">user</span>
+    <span class="s0">description</span><span class="s1">: </span><span class="s3">Operations about user</span>
+<span class="s0">paths</span><span class="s1">:</span>
+  <span class="s0">/pet</span><span class="s1">:</span>
+    <span class="s0">post</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">pet</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Add a new pet to the store</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Add a new pet to the store</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">addPet</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+        <span class="s0">'405'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid input</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+      <span class="s0">requestBody</span><span class="s1">:</span>
+        <span class="s0">description</span><span class="s1">: </span><span class="s3">Create a new pet in the store</span>
+        <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+        <span class="s0">content</span><span class="s1">:</span>
+          <span class="s0">application/json</span><span class="s1">:</span>
+            <span class="s0">schema</span><span class="s1">:</span>
+              <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+    <span class="s0">put</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">pet</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Update an existing pet</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Update an existing pet by Id</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">updatePet</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid ID supplied</span>
+        <span class="s0">'404'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Pet not found</span>
+        <span class="s0">'405'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Validation exception</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+      <span class="s0">requestBody</span><span class="s1">:</span>
+        <span class="s0">description</span><span class="s1">: </span><span class="s3">Update an existent pet in the store</span>
+        <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+        <span class="s0">content</span><span class="s1">:</span>
+          <span class="s0">application/json</span><span class="s1">:</span>
+            <span class="s0">schema</span><span class="s1">:</span>
+              <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+  <span class="s0">/pet/findByStatus</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">pet</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Find pets by status</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Multiple status values can be provided with comma separated strings</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">findPetsByStatus</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">status</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Status values that need to be considered for filter</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">explode</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+            <span class="s0">enum</span><span class="s1">:</span>
+              <span class="s1">- </span><span class="s3">available</span>
+              <span class="s1">- </span><span class="s3">pending</span>
+              <span class="s1">- </span><span class="s3">sold</span>
+            <span class="s0">default</span><span class="s1">: </span><span class="s3">available</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+                <span class="s0">items</span><span class="s1">:</span>
+                  <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid status value</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+  <span class="s0">/pet/findByTags</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">pet</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Finds pets by tags</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">&gt;-</span>
+        <span class="s3">Multiple tags can be provided with comma separated strings. Use tag1,</span>
+        <span class="s3">tag2, tag3 for testing.</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">findPetsByTags</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">tags</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Tags to filter by</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">explode</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+            <span class="s0">items</span><span class="s1">:</span>
+              <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+                <span class="s0">items</span><span class="s1">:</span>
+                  <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid tag value</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+  <span class="s0">'/pet/{petId}'</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">pet</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Find pet by ID</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Returns a single pet</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">getPetById</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">petId</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">ID of pet to return</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid ID supplied</span>
+        <span class="s0">'404'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Pet not found</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">api_key</span><span class="s1">: []</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+    <span class="s0">post</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">pet</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Update a pet in the store with form data</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s4">''</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">updatePetWithForm</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">petId</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">ID of pet that needs to be updated</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">name</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Name of pet that needs to be updated</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">status</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Status of pet that needs to be updated</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'405'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid input</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+    <span class="s0">delete</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">pet</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Delete a pet</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s4">''</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">deletePet</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">api_key</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">header</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s4">''</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">petId</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Pet id to delete</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid pet value</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+  <span class="s0">'/pet/{petId}/uploadImage'</span><span class="s1">:</span>
+    <span class="s0">post</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">pet</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Upload an image</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s4">''</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">uploadFile</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">petId</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">ID of pet to update</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">additionalMetadata</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Additional Metadata</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/ApiResponse'</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+      <span class="s0">requestBody</span><span class="s1">:</span>
+        <span class="s0">content</span><span class="s1">:</span>
+          <span class="s0">application/octet-stream</span><span class="s1">:</span>
+            <span class="s0">schema</span><span class="s1">:</span>
+              <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+              <span class="s0">format</span><span class="s1">: </span><span class="s3">binary</span>
+  <span class="s0">/breaking_news</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">breaking_news</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">根據類型與狀態選擇最新消息</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Multiple status values can be provided with comma separated strings</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">findPetsByStatus</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">type</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">一般、重要、繳費、家長留言板</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">explode</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+            <span class="s0">enum</span><span class="s1">:</span>
+              <span class="s1">- </span><span class="s3">general</span>
+              <span class="s1">- </span><span class="s3">important</span>
+              <span class="s1">- </span><span class="s3">payment</span>
+              <span class="s1">- </span><span class="s3">board</span>
+            <span class="s0">default</span><span class="s1">: </span><span class="s3">available</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">status</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">已發佈、預約發佈</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">explode</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+            <span class="s0">enum</span><span class="s1">:</span>
+              <span class="s1">- </span><span class="s3">published</span>
+              <span class="s1">- </span><span class="s3">scheduled</span>
+            <span class="s0">default</span><span class="s1">: </span><span class="s3">available</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">order_by</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">“ASC” or “DESC”,固定用日期排序</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">explode</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+            <span class="s0">enum</span><span class="s1">:</span>
+              <span class="s1">- </span><span class="s3">ASC</span>
+              <span class="s1">- </span><span class="s3">DESC</span>
+            <span class="s0">default</span><span class="s1">: </span><span class="s3">available</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+                <span class="s0">items</span><span class="s1">:</span>
+                  <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/BreakingNews'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid status value</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+  <span class="s0">/breaking_news/{news_id}</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">breaking_news</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">最新消息內頁資料</span>
+      <span class="s0">x-swagger-router-controller</span><span class="s1">: </span><span class="s3">OrderController</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">For valid response try integer IDs with value less than 5 or &gt; 10. Other values</span>
+        <span class="s3">will generate exceptions.</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">getOrderById</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">news_id</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">ID of order that needs to be fetched</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/BreakingNewsDetail'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid ID supplied</span>
+        <span class="s0">'404'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Order not found</span>
+    <span class="s0">delete</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">breaking_news</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Delete purchase order by ID</span>
+      <span class="s0">x-swagger-router-controller</span><span class="s1">: </span><span class="s3">OrderController</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">&gt;-</span>
+        <span class="s3">For valid response try integer IDs with value &lt; 1000. Anything above</span>
+        <span class="s3">1000 or nonintegers will generate API errors</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">deleteOrder</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">orderId</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">ID of the order that needs to be deleted</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid ID supplied</span>
+        <span class="s0">'404'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Order not found</span>
+  <span class="s0">/questionnaire</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">questionnaire</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">根據狀態取得問卷</span>
+      <span class="s0">x-swagger-router-controller</span><span class="s1">: </span><span class="s3">OrderController</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">For valid response try integer IDs with value less than 5 or &gt; 10. Other values</span>
+        <span class="s3">will generate exceptions.</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">getOrderById</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">status</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">已發佈、預約發佈</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">explode</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+            <span class="s0">enum</span><span class="s1">:</span>
+              <span class="s1">- </span><span class="s3">ongoing</span>
+              <span class="s1">- </span><span class="s3">completed</span>
+              <span class="s1">- </span><span class="s3">scheduled</span>
+            <span class="s0">default</span><span class="s1">: </span><span class="s3">available</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">order_by</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">“ASC” or “DESC”,固定用日期排序</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">explode</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+            <span class="s0">enum</span><span class="s1">:</span>
+              <span class="s1">- </span><span class="s3">ASC</span>
+              <span class="s1">- </span><span class="s3">DESC</span>
+            <span class="s0">default</span><span class="s1">: </span><span class="s3">available</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Questionnaire'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid ID supplied</span>
+        <span class="s0">'404'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Order not found</span>
+  <span class="s0">/questionnaire/{questionnaire_id}</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">questionnaire</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">問卷內頁</span>
+      <span class="s0">x-swagger-router-controller</span><span class="s1">: </span><span class="s3">OrderController</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">For valid response try integer IDs with value less than 5 or &gt; 10. Other values</span>
+        <span class="s3">will generate exceptions.</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">getOrderById</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">questionnaire_id</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">問卷ID</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">explode</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/QuestionnaireDetail'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid ID supplied</span>
+        <span class="s0">'404'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Order not found</span>
+  <span class="s0">/contact_books</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">contact_books</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">根據班別與日期獲取聯絡簿列表</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Multiple status values can be provided with comma separated strings</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">findPetsByStatus</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">date</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s4">&quot;想要查詢的日期 (YYYY-MM-DD)&quot;</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">date</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">crClass_id</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s4">&quot;班別ID&quot;</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">date</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+                <span class="s0">items</span><span class="s1">:</span>
+                  <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid status value</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+  <span class="s0">/contact_books/{contactBook_id}</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">contact_books</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">聯絡簿內頁</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Multiple status values can be provided with comma separated strings</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">findPetsByStatus</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">contactBook_id</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">聯絡簿ID</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">explode</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+                <span class="s0">items</span><span class="s1">:</span>
+                  <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid status value</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+  <span class="s0">/attendance</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">attendance</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">根據狀態選擇最新消息</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Multiple status values can be provided with comma separated strings</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">findPetsByStatus</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">type</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Status values that need to be considered for filter</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">explode</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+            <span class="s0">enum</span><span class="s1">:</span>
+              <span class="s1">- </span><span class="s3">available</span>
+              <span class="s1">- </span><span class="s3">pending</span>
+              <span class="s1">- </span><span class="s3">sold</span>
+            <span class="s0">default</span><span class="s1">: </span><span class="s3">available</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">order_by</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Status values that need to be considered for filter</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">explode</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+            <span class="s0">enum</span><span class="s1">:</span>
+              <span class="s1">- </span><span class="s3">available</span>
+              <span class="s1">- </span><span class="s3">pending</span>
+              <span class="s1">- </span><span class="s3">sold</span>
+            <span class="s0">default</span><span class="s1">: </span><span class="s3">available</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+                <span class="s0">items</span><span class="s1">:</span>
+                  <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid status value</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">petstore_auth</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s4">'write:pets'</span>
+            <span class="s1">- </span><span class="s4">'read:pets'</span>
+  <span class="s0">/store/inventory</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">store</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Find pet inventories by status</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Returns a map of status codes to quantities</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">getInventory</span>
+      <span class="s0">x-swagger-router-controller</span><span class="s1">: </span><span class="s3">OrderController</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+                <span class="s0">additionalProperties</span><span class="s1">:</span>
+                  <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+                  <span class="s0">format</span><span class="s1">: </span><span class="s3">int32</span>
+      <span class="s0">security</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">api_key</span><span class="s1">: []</span>
+  <span class="s0">/store/order/v1</span><span class="s1">:</span>
+    <span class="s0">post</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">store</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Place an order for a pet</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Place a new order in the store</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">placeOrder</span>
+      <span class="s0">x-swagger-router-controller</span><span class="s1">: </span><span class="s3">OrderController</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Order'</span>
+        <span class="s0">'405'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid input</span>
+      <span class="s0">requestBody</span><span class="s1">:</span>
+        <span class="s0">content</span><span class="s1">:</span>
+          <span class="s0">application/json</span><span class="s1">:</span>
+            <span class="s0">schema</span><span class="s1">:</span>
+              <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Order'</span>
+  <span class="s0">/store/order/v2</span><span class="s1">:</span>
+    <span class="s0">post</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">store</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Place an order for a pet (v2)</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Place a new order in the store with v2 endpoint</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">placeOrderV2</span>
+      <span class="s0">x-swagger-router-controller</span><span class="s1">: </span><span class="s3">OrderController</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'201'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Order successfully placed</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Order'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Bad request</span>
+        <span class="s0">'405'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid input</span>
+      <span class="s0">requestBody</span><span class="s1">:</span>
+        <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+        <span class="s0">content</span><span class="s1">:</span>
+          <span class="s0">application/json</span><span class="s1">:</span>
+            <span class="s0">schema</span><span class="s1">:</span>
+              <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Order'</span>
+  <span class="s0">'/store/order/{orderId}'</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">store</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Find purchase order by ID</span>
+      <span class="s0">x-swagger-router-controller</span><span class="s1">: </span><span class="s3">OrderController</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">For valid response try integer IDs with value less than 5 or &gt; 10. Other values</span>
+        <span class="s3">will generate exceptions.</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">getOrderById</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">orderId</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">ID of order that needs to be fetched</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Order'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid ID supplied</span>
+        <span class="s0">'404'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Order not found</span>
+    <span class="s0">delete</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">store</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Delete purchase order by ID</span>
+      <span class="s0">x-swagger-router-controller</span><span class="s1">: </span><span class="s3">OrderController</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">&gt;-</span>
+        <span class="s3">For valid response try integer IDs with value &lt; 1000. Anything above</span>
+        <span class="s3">1000 or nonintegers will generate API errors</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">deleteOrder</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">orderId</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">ID of the order that needs to be deleted</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+            <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid ID supplied</span>
+        <span class="s0">'404'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Order not found</span>
+  <span class="s0">/user</span><span class="s1">:</span>
+    <span class="s0">post</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">user</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Create user</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">This can only be done by the logged in user.</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">createUser</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">default</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/User'</span>
+      <span class="s0">requestBody</span><span class="s1">:</span>
+        <span class="s0">content</span><span class="s1">:</span>
+          <span class="s0">application/json</span><span class="s1">:</span>
+            <span class="s0">schema</span><span class="s1">:</span>
+              <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/User'</span>
+        <span class="s0">description</span><span class="s1">: </span><span class="s3">Created user object</span>
+  <span class="s0">/user/createWithList</span><span class="s1">:</span>
+    <span class="s0">post</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">user</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Create list of users with given input array</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s4">'Creates list of users with given input array'</span>
+      <span class="s0">x-swagger-router-controller</span><span class="s1">: </span><span class="s3">UserController</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">createUsersWithListInput</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/User'</span>
+        <span class="s0">default</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid username supplied</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/ErrorResponse'</span>
+
+      <span class="s0">requestBody</span><span class="s1">:</span>
+        <span class="s0">content</span><span class="s1">:</span>
+          <span class="s0">application/json</span><span class="s1">:</span>
+            <span class="s0">schema</span><span class="s1">:</span>
+              <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+              <span class="s0">items</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/User'</span>
+  <span class="s0">/user/login</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">user</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Log user into the system</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s4">''</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">loginUser</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">username</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">The user name for login</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">password</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">query</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">The password for login in clear text</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">false</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">headers</span><span class="s1">:</span>
+            <span class="s0">X-Rate-Limit</span><span class="s1">:</span>
+              <span class="s0">description</span><span class="s1">: </span><span class="s3">calls per hour allowed by the user</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+                <span class="s0">format</span><span class="s1">: </span><span class="s3">int32</span>
+            <span class="s0">X-Expires-After</span><span class="s1">:</span>
+              <span class="s0">description</span><span class="s1">: </span><span class="s3">date in UTC when token expires</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+                <span class="s0">format</span><span class="s1">: </span><span class="s3">date-time</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid username/password supplied</span>
+  <span class="s0">/user/logout</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">user</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Log current user out</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s4">''</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">logoutUser</span>
+      <span class="s0">parameters</span><span class="s1">: []</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">default</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+  <span class="s0">'/user/{username}'</span><span class="s1">:</span>
+    <span class="s0">get</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">user</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Get user by user name</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s4">''</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">getUserByName</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">username</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s4">'The name that needs to be fetched. Use user1 for testing. '</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'200'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+          <span class="s0">content</span><span class="s1">:</span>
+            <span class="s0">application/json</span><span class="s1">:</span>
+              <span class="s0">schema</span><span class="s1">:</span>
+                <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/User'</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid username supplied</span>
+        <span class="s0">'404'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">User not found</span>
+    <span class="s0">put</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">user</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Update user</span>
+      <span class="s0">x-swagger-router-controller</span><span class="s1">: </span><span class="s3">UserController</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">This can only be done by the logged in user.</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">updateUser</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">username</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">name that needs to be updated</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">default</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">successful operation</span>
+      <span class="s0">requestBody</span><span class="s1">:</span>
+        <span class="s0">description</span><span class="s1">: </span><span class="s3">Update an existent user in the store</span>
+        <span class="s0">content</span><span class="s1">:</span>
+          <span class="s0">application/json</span><span class="s1">:</span>
+            <span class="s0">schema</span><span class="s1">:</span>
+              <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/User'</span>
+    <span class="s0">delete</span><span class="s1">:</span>
+      <span class="s0">tags</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">user</span>
+      <span class="s0">summary</span><span class="s1">: </span><span class="s3">Delete user</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">This can only be done by the logged in user.</span>
+      <span class="s0">operationId</span><span class="s1">: </span><span class="s3">deleteUser</span>
+      <span class="s0">parameters</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s0">name</span><span class="s1">: </span><span class="s3">username</span>
+          <span class="s0">in</span><span class="s1">: </span><span class="s3">path</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">The name that needs to be deleted</span>
+          <span class="s0">required</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+      <span class="s0">responses</span><span class="s1">:</span>
+        <span class="s0">'400'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Invalid username supplied</span>
+        <span class="s0">'404'</span><span class="s1">:</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">User not found</span>
+<span class="s0">externalDocs</span><span class="s1">:</span>
+  <span class="s0">description</span><span class="s1">: </span><span class="s3">Find out more about Swagger</span>
+  <span class="s0">url</span><span class="s1">: </span><span class="s4">'http://swagger.io'</span>
+<span class="s0">components</span><span class="s1">:</span>
+  <span class="s0">schemas</span><span class="s1">:</span>
+    <span class="s0">BreakingNews</span><span class="s1">:</span>
+      <span class="s0">x-swagger-router-model</span><span class="s1">: </span><span class="s3">io.swagger.petstore.model.Order</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">breaking_news_id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">10</span>
+        <span class="s0">type_id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">2</span>
+        <span class="s0">type_name</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Order Status</span>
+          <span class="s0">enum</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s3">一般</span>
+            <span class="s1">- </span><span class="s3">繳費</span>
+            <span class="s1">- </span><span class="s3">重要</span>
+            <span class="s1">- </span><span class="s3">家長留言板</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">重要</span>
+        <span class="s0">is_pinned</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">boolean</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">是否被置頂，被置頂的消息再用日期排序</span>
+        <span class="s0">title</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">下週課程時間安排通知</span>
+        <span class="s0">published_time</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">date-time</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">order</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">BreakingNewsDetail</span><span class="s1">:</span>
+      <span class="s0">x-swagger-router-model</span><span class="s1">: </span><span class="s3">io.swagger.petstore.model.Order</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">breaking_news_id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">10</span>
+        <span class="s0">type_id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">2</span>
+        <span class="s0">type_name</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">Order Status</span>
+          <span class="s0">enum</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s3">一般</span>
+            <span class="s1">- </span><span class="s3">繳費</span>
+            <span class="s1">- </span><span class="s3">重要</span>
+            <span class="s1">- </span><span class="s3">家長留言板</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">重要</span>
+        <span class="s0">is_pinned</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">boolean</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">是否被置頂，被置頂的消息再用日期排序</span>
+        <span class="s0">title</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">下週課程時間安排通知</span>
+        <span class="s0">published_time</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">date-time</span>
+        <span class="s0">content</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">親愛的家長，您好：感謝您對本補習班的支持！以下是下週的課程安排： 日期：MM月DD日（週X） 時間：XX:XX - XX:XX 地點：XXX教室 如有任何問題或需要調整，請於 MM月DD日 前與我們聯繫，謝謝！</span>
+        <span class="s0">boards</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+          <span class="s0">items</span><span class="s1">:</span>
+            <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Message'</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">order</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">Message</span><span class="s1">:</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">message_id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">20</span>
+        <span class="s0">role</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">0</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">0:老師 1:家長</span>
+        <span class="s0">message</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">親愛的老師，您好：由於家庭出遊等，我的孩子無法參加課程</span>
+        <span class="s0">reply</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+          <span class="s0">items</span><span class="s1">:</span>
+            <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/MessageReply'</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">customer</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">MessageReply</span><span class="s1">:</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">message_id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">20</span>
+        <span class="s0">replay_id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">2</span>
+        <span class="s0">reply_message</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">好的，沒問題</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">customer</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">Questionnaire</span><span class="s1">:</span>
+      <span class="s0">x-swagger-router-model</span><span class="s1">: </span><span class="s3">io.swagger.petstore.model.Order</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">questionnaire_id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">10</span>
+        <span class="s0">status</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">問卷狀態 0:進行中 1:已結束 2:預約發佈</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">0</span>
+        <span class="s0">title</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">問卷主旨標題</span>
+        <span class="s0">published_time</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">date-time</span>
+        <span class="s0">due_time</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">date-time</span>
+        <span class="s0">visibility</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">1</span>
+        <span class="s0">unreplied</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">20</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">尚未回覆人數</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">order</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">QuestionnaireDetail</span><span class="s1">:</span>
+      <span class="s0">x-swagger-router-model</span><span class="s1">: </span><span class="s3">io.swagger.petstore.model.Order</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">questionnaire_id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">10</span>
+        <span class="s0">title</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">問卷主旨標題</span>
+        <span class="s0">published_time</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">date-time</span>
+        <span class="s0">due_time</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">date-time</span>
+        <span class="s0">visibility</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">1</span>
+        <span class="s0">unreplied</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">20</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">尚未回覆人數</span>
+        <span class="s0">unreplied_list</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">尚未回覆列表</span>
+          <span class="s0">items</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">order</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">Customer</span><span class="s1">:</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">100000</span>
+        <span class="s0">username</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">fehguy</span>
+        <span class="s0">address</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+          <span class="s0">items</span><span class="s1">:</span>
+            <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Address'</span>
+          <span class="s0">xml</span><span class="s1">:</span>
+            <span class="s0">wrapped</span><span class="s1">: </span><span class="s3">true</span>
+            <span class="s0">name</span><span class="s1">: </span><span class="s3">addresses</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">customer</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">Address</span><span class="s1">:</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">street</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">437 Lytton</span>
+        <span class="s0">city</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">Palo Alto</span>
+        <span class="s0">state</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">CA</span>
+        <span class="s0">zip</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">94301</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">address</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">Category</span><span class="s1">:</span>
+      <span class="s0">x-swagger-router-model</span><span class="s1">: </span><span class="s3">io.swagger.petstore.model.Category</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">1</span>
+        <span class="s0">name</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">Dogs</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">category</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">User</span><span class="s1">:</span>
+      <span class="s0">x-swagger-router-model</span><span class="s1">: </span><span class="s3">io.swagger.petstore.model.User</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">10</span>
+        <span class="s0">username</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">theUser</span>
+        <span class="s0">firstName</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">John</span>
+        <span class="s0">lastName</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">James</span>
+        <span class="s0">email</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">john@email.com</span>
+        <span class="s0">password</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">12345</span>
+        <span class="s0">phone</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">12345</span>
+        <span class="s0">userStatus</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int32</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">1</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">User Status</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">user</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">Tag</span><span class="s1">:</span>
+      <span class="s0">x-swagger-router-model</span><span class="s1">: </span><span class="s3">io.swagger.petstore.model.Tag</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+        <span class="s0">name</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">tag</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">Pet</span><span class="s1">:</span>
+      <span class="s0">x-swagger-router-model</span><span class="s1">: </span><span class="s3">io.swagger.petstore.model.Pet</span>
+      <span class="s0">required</span><span class="s1">:</span>
+        <span class="s1">- </span><span class="s3">name</span>
+        <span class="s1">- </span><span class="s3">photoUrls</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">id</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int64</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">10</span>
+        <span class="s0">name</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">example</span><span class="s1">: </span><span class="s3">doggie</span>
+        <span class="s0">category</span><span class="s1">:</span>
+          <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Category'</span>
+        <span class="s0">photoUrls</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+          <span class="s0">xml</span><span class="s1">:</span>
+            <span class="s0">wrapped</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">items</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+            <span class="s0">xml</span><span class="s1">:</span>
+              <span class="s0">name</span><span class="s1">: </span><span class="s3">photoUrl</span>
+        <span class="s0">tags</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+          <span class="s0">xml</span><span class="s1">:</span>
+            <span class="s0">wrapped</span><span class="s1">: </span><span class="s3">true</span>
+          <span class="s0">items</span><span class="s1">:</span>
+            <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Tag'</span>
+            <span class="s0">xml</span><span class="s1">:</span>
+              <span class="s0">name</span><span class="s1">: </span><span class="s3">tag</span>
+        <span class="s0">status</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+          <span class="s0">description</span><span class="s1">: </span><span class="s3">pet status in the store</span>
+          <span class="s0">enum</span><span class="s1">:</span>
+            <span class="s1">- </span><span class="s3">available</span>
+            <span class="s1">- </span><span class="s3">pending</span>
+            <span class="s1">- </span><span class="s3">sold</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s3">pet</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">ApiResponse</span><span class="s1">:</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">code</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int32</span>
+        <span class="s0">type</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+        <span class="s0">message</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+      <span class="s0">xml</span><span class="s1">:</span>
+        <span class="s0">name</span><span class="s1">: </span><span class="s4">'##default'</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+    <span class="s0">ErrorResponse</span><span class="s1">:</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+      <span class="s0">properties</span><span class="s1">:</span>
+        <span class="s0">code</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">integer</span>
+          <span class="s0">format</span><span class="s1">: </span><span class="s3">int32</span>
+        <span class="s0">details</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+          <span class="s0">items</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">object</span>
+            <span class="s0">properties</span><span class="s1">:</span>
+              <span class="s0">typeUrl</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+              <span class="s0">value</span><span class="s1">:</span>
+                <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+        <span class="s0">message</span><span class="s1">:</span>
+          <span class="s0">type</span><span class="s1">: </span><span class="s3">string</span>
+  <span class="s0">requestBodies</span><span class="s1">:</span>
+    <span class="s0">Pet</span><span class="s1">:</span>
+      <span class="s0">content</span><span class="s1">:</span>
+        <span class="s0">application/json</span><span class="s1">:</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+        <span class="s0">application/xml</span><span class="s1">:</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/Pet'</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">Pet object that needs to be added to the store</span>
+    <span class="s0">UserArray</span><span class="s1">:</span>
+      <span class="s0">content</span><span class="s1">:</span>
+        <span class="s0">application/json</span><span class="s1">:</span>
+          <span class="s0">schema</span><span class="s1">:</span>
+            <span class="s0">type</span><span class="s1">: </span><span class="s3">array</span>
+            <span class="s0">items</span><span class="s1">:</span>
+              <span class="s0">$ref</span><span class="s1">: </span><span class="s4">'#/components/schemas/User'</span>
+      <span class="s0">description</span><span class="s1">: </span><span class="s3">List of user object</span>
+  <span class="s0">securitySchemes</span><span class="s1">:</span>
+    <span class="s0">petstore_auth</span><span class="s1">:</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">oauth2</span>
+      <span class="s0">flows</span><span class="s1">:</span>
+        <span class="s0">implicit</span><span class="s1">:</span>
+          <span class="s0">authorizationUrl</span><span class="s1">: </span><span class="s4">'https://petstore.swagger.io/oauth/authorize'</span>
+          <span class="s0">scopes</span><span class="s1">:</span>
+            <span class="s0">'write:pets'</span><span class="s1">: </span><span class="s3">modify pets in your account</span>
+            <span class="s0">'read:pets'</span><span class="s1">: </span><span class="s3">read your pets</span>
+    <span class="s0">api_key</span><span class="s1">:</span>
+      <span class="s0">type</span><span class="s1">: </span><span class="s3">apiKey</span>
+      <span class="s0">name</span><span class="s1">: </span><span class="s3">api_key</span>
+      <span class="s0">in</span><span class="s1">: </span><span class="s3">header</span>
+</pre>
+</body>
+</html>

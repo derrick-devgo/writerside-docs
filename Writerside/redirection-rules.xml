@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="1d0f4a77">
+        <description>Created after removal of "最新消息12" from API Docs</description>
+        <accepts>最新消息12.html</accepts>
+    </rule>
+    <rule id="6f62f9fc">
+        <description>Created after removal of "最新消息1" from API Docs</description>
+        <accepts>最新消息1.html</accepts>
+    </rule>
+    <rule id="9c4e9c6">
+        <description>Created after removal of "取得訂餐" from API Docs</description>
+        <accepts>Place-an-order-for-a-pet.html</accepts>
+    </rule>
+</rules>
