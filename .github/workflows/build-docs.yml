@@ -16,11 +16,13 @@ jobs:
       - name: Generate documentation website
         uses: JetBrains/writerside-github-action@v4
         with:
-          instance: Writerside/adoc  # 指定模組名稱和實例 ID
-          docker-version: 243.22562  # Docker 映像版本
+          instance: Writerside/adoc
+          docker-version: 243.22562
+        env:
+          LOG_LEVEL: DEBUG
 
       - name: List generated files
-        run: ls -la artifacts/  # 列出 artifacts 資料夾內容，確認是否生成文檔
+        run: ls -R artifacts/
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
@@ -41,7 +43,7 @@ jobs:
           name: docs
 
       - name: Unzip website
-        run: unzip artifacts/Writerside.zip -d site  # 修改這裡的壓縮檔名稱
+        run: unzip artifacts/<actual-file-name>.zip -d site
 
       - name: Enable GitHub Pages
         uses: actions/configure-pages@v4
@@ -49,7 +51,7 @@ jobs:
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site  # 解壓後的網站目錄
+          path: site
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
