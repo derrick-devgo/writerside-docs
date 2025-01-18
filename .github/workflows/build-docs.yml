@@ -3,8 +3,8 @@ name: Build and Deploy Documentation
 on:
   push:
     branches:
-      - main  # 當推送到主分支時觸發
-  workflow_dispatch:  # 支援手動觸發
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -16,16 +16,14 @@ jobs:
       - name: Generate documentation website
         uses: JetBrains/writerside-github-action@v4
         with:
-          config-path: Writerside/writerside.cfg  # 指定 writerside.cfg 路徑
-        env:
-          INSTANCE: Writerside/adoc  # 模組名稱和實例 ID（以 `/` 分隔）
-          DOCKER_VERSION: 243.22562  # Writerside Docker 版本
+          instance: Writerside/adoc
+          docker-version: 243.22562
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v4
         with:
           name: docs
-          path: out/  # 文檔輸出目錄
+          path: artifacts/
 
   deploy:
     needs: build
@@ -40,7 +38,7 @@ jobs:
           name: docs
 
       - name: Unzip website
-        run: unzip docs.zip -d site
+        run: unzip artifacts/docs.zip -d site
 
       - name: Enable GitHub Pages
         uses: actions/configure-pages@v4
@@ -48,7 +46,7 @@ jobs:
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site  # 解壓後的網站資料夾
+          path: site
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
